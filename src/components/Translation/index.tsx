@@ -1,7 +1,7 @@
 import {View, Text, TextInput, Button, ActivityIndicator} from 'react-native';
 import React, {useCallback, useState} from 'react';
 import styles from './styles';
-import {getTranslatedText} from '../services/api';
+import {getTranslatedText} from '../../services/api';
 
 export const Translation: React.FC = () => {
   const [text, setText] = useState<string>('');

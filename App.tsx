@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {View, Text, StyleSheet, Image, Pressable, TextInput, StatusBar} from 'react-native';
-import {Conversation, Translate} from './assets';
-import { AskAQuestion, Translation } from './src/components';
+import {Conversation as ConversationIcon, Translate} from './assets';
+import { Conversation, Translation } from './src/components';
 
 interface ContentProps {
   selectedIndex: number;
@@ -10,7 +10,7 @@ interface ContentProps {
 const Content: React.FC<ContentProps> = ({ selectedIndex }) => {
   switch (selectedIndex) {
     case 0: 
-      return <AskAQuestion />
+      return <Conversation />
     case 1:
       return <Translation />
     default: return <></>;
@@ -26,7 +26,7 @@ const App: React.FC = () => {
       <Content {...{selectedIndex}} />
       <View style={styles.tabBar}>
         <Pressable onPress={changeSelection(0)}>
-          <Image style={styles.tabIcon} source={Conversation} />
+          <Image style={styles.tabIcon} source={ConversationIcon} />
         </Pressable>
         <Pressable onPress={changeSelection(1)}>
           <Image style={styles.tabIcon} source={Translate} />

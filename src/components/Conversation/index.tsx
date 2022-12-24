@@ -9,10 +9,10 @@ import {
   Text,
 } from 'react-native';
 import {Loader, Typing} from '../../../assets';
-import {getAnswer} from '../services/api';
+import {getAnswer} from '../../services/api';
 import styles from './styles';
 
-export const AskAQuestion: React.FC = () => {
+export const Conversation: React.FC = () => {
   const [text, setText] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
   const [conversation, setConversation] = useState<Record<string, string>>({});
